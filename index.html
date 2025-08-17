@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Network Engineer & Cloud Automation Expert</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your Name - Network Engineer specializing in cloud automation, 5G networks, and enterprise network transformation">
+    <meta name="keywords" content="network engineer, cloud automation, 5G, AWS, Azure, network security, DevNetOps">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Your Name - Network Engineering Expert">
+    <meta property="og:description" content="Professional portfolio showcasing expertise in network automation and cloud technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .profile-section {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+        }
+
+        .contact-btn:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: #667eea;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #667eea;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #333;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: block;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 60px;
+        }
+
+        .about-text h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .about-highlights h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .about-highlights ul {
+            list-style: none;
+        }
+
+        .about-highlights li {
+            padding: 8px 0;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .about-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #667eea;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: color 0.3s ease;
+            font-size: 1.05em;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-list li:hover {
+            color: #667eea;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 30px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #667eea;
+            box-shadow: 0 0 0 4px white, 0 0 0 8px #667eea;
+        }
+
+        .experience-date {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .experience-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        .experience-item h4 {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .experience-item ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .experience-item ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-title {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            transform: scale(1.05);
+        }
+
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 5px solid #667eea;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .cert-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .cert-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .cert-card p {
+            color: #666;
+            font-size: 1.05em;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        #contact .section-title {
+            color: white;
+        }
+
+        #contact .section-title::after {
+            background: white;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 1.05em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 0;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .experience-timeline {
+                padding-left: 20px;
+            }
+
+            .experience-timeline::before {
+                left: 10px;
+            }
+
+            .experience-item::before {
+                left: -26px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a6fd8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-img">👨‍💻</div>
+                <h1>Your Name</h1>
+                <p class="tagline">Network Engineer → Cloud Automation Expert</p>
+                <div class="contact-info">
+                    <a href="mailto:your.email@example.com" class="contact-btn">📧 Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-btn">💼 LinkedIn</a>
+                    <a href="https://github.com/yourusername" class="contact-btn">💻 GitHub</a>
+                    <a href="tel:+91XXXXXXXXXX" class="contact-btn">📞 Call</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Journey</h3>
+                    <p>Network Engineer with 11+ years of experience in traditional networking, successfully transformed into a Cloud Automation Expert specializing in next-generation technologies including 5G networks, multi-cloud architecture, and AI-enhanced network operations.</p>
+                    
+                    <p>I have a proven track record of implementing enterprise-scale automation solutions that reduce operational costs by 60% and deployment time by 80%. My expertise spans from traditional network operations to cutting-edge cloud technologies, making me uniquely positioned to bridge the gap between legacy systems and modern infrastructure.</p>
+
+                    <p>Passionate about sharing knowledge and driving innovation in the networking industry through thought leadership, mentoring, and community engagement.</p>
+                </div>
+                
+                <div class="about-highlights">
+                    <h3>Current Expertise</h3>
+                    <ul>
+                        <li>🚀 5G Network Architecture & Private Networks</li>
+                        <li>☁️ Multi-Cloud Automation (AWS, Azure, GCP)</li>
+                        <li>🤖 AI/ML Enhanced Network Operations</li>
+                        <li>🔒 Zero Trust Network Security</li>
+                        <li>📊 DevNetOps & GitOps Implementation</li>
+                        <li>🎯 Kubernetes & Service Mesh</li>
+                        <li>🔧 Infrastructure as Code (Terraform, Ansible)</li>
+                        <li>📈 Thought Leadership & Industry Speaking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>☁️ Cloud Platforms</h4>
+                    <ul class="skill-list">
+                        <li>AWS Advanced Networking</li>
+                        <li>Azure Virtual Networks</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Multi-Cloud Architecture</li>
+                        <li>Edge Computing Integration</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>🔧 Automation & DevOps</h4>
+                    <ul class="skill-list">
+                        <li>Ansible & Terraform</li>
+                        <li>Python Network Automation</li>
+                        <li>CI/CD Pipelines (Jenkins, GitLab)</li>
+                        <li>GitOps Workflows</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>🚀 Next-Gen Technologies</h4>
+                    <ul class="skill-list">
+                        <li>5G Core & RAN Architecture</li>
+                        <li>Kubernetes Networking</li>
+                        <li>Service Mesh (Istio, Linkerd)</li>
+                        <li>AI/ML for Network Optimization</li>
+                        <li>Container Orchestration</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>🔒 Security & Compliance</h4>
+                    <ul class="skill-list">
+                        <li>Zero Trust Architecture</li>
+                        <li>Network Security Automation</li>
+                        <li>Compliance Frameworks</li>
+                        <li>SIEM Integration</li>
+                        <li>Threat Detection & Response</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>🌐 Traditional Networking</h4>
+                    <ul class="skill-list">
+                        <li>Routing & Switching (OSPF, BGP)</li>
+                        <li>Wireless Technologies (WiFi 6/7)</li>
+                        <li>Network Design & Architecture</li>
+                        <li>NOC Operations & Monitoring</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>💼 Leadership & Business</h4>
+                    <ul class="skill-list">
+                        <li>Technical Team Leadership</li>
+                        <li>Enterprise Solution Architecture</li>
+                        <li>Digital Transformation Strategy</li>
+                        <li>Technology Consulting</li>
+                        <li>Stakeholder Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2024 - Present</div>
+                    <h3>Senior Network Automation Engineer</h3>
+                    <h4>Current Company Name</h4>
+                    <p>Leading enterprise network automation initiatives, implementing multi-cloud infrastructure, and driving 5G network transformation projects. Responsible for designing and implementing next-generation network architectures with focus on automation, security, and scalability.</p>
+                    <ul>
+                        <li>Implemented GitOps workflows reducing network deployment time by 80%</li>
+                        <li>Designed and deployed private 5G networks for industrial IoT applications</li>
+                        <li>Led cross-functional team of 8 engineers in cloud migration projects</li>
+                        <li>Developed AI-enhanced monitoring solution reducing MTTR by 65%</li>
+                        <li>Established DevNetOps practices improving deployment reliability to 99.9%</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2020 - 2024</div>
+                    <h3>Network Administrator - NOC</h3>
+                    <h4>Previous Company Name</h4>
+                    <p>Managed enterprise wireless infrastructure and NOC operations while successfully transitioning to cloud and automation technologies. Initiated automation projects that became foundation for enterprise-wide digital transformation.</p>
+                    <ul>
+                        <li>Maintained 99.9% network uptime across 500+ wireless access points</li>
+                        <li>Automated routine network tasks reducing manual intervention by 70%</li>
+                        <li>Implemented comprehensive network monitoring and alerting systems</li>
+                        <li>Led WiFi 6 migration project for 10,000+ users</li>
+                        <li>Developed Python scripts for configuration management and reporting</li>
+                        <li>Mentored junior engineers in automation best practices</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2017 - 2020</div>
+                    <h3>Wireless Network Engineer</h3>
+                    <h4>Earlier Company Name</h4>
+                    <p>Specialized in wireless network design, implementation, and optimization across multiple enterprise environments. Developed expertise in RF planning, troubleshooting, and performance optimization.</p>
+                    <ul>
+                        <li>Designed and deployed wireless networks for 50+ enterprise locations</li>
+                        <li>Optimized wireless performance achieving 40% improvement in throughput</li>
+                        <li>Implemented wireless security best practices and compliance frameworks</li>
+                        <li>Conducted site surveys and RF planning for complex environments</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2013 - 2017</div>
+                    <h3>Network Support Engineer</h3>
+                    <h4>First Company Name</h4>
+                    <p>Started career in network support, building strong foundation in networking fundamentals, troubleshooting, and customer service. Rapidly progressed through roles by demonstrating technical excellence and learning agility.</p>
+                    <ul>
+                        <li>Provided L2/L3 technical support for enterprise network infrastructure</li>
+                        <li>Resolved 95% of network issues within SLA timeframes</li>
+                        <li>Documented troubleshooting procedures and knowledge base articles</li>
+                        <li>Participated in 24/7 on-call rotation for critical network support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Enterprise Multi-Cloud Automation Platform</h3>
+                        <p class="project-description">Comprehensive automation platform enabling unified management across AWS, Azure, and GCP with advanced cost optimization, security integration, and intelligent monitoring capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GitOps</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📡</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Private 5G Network for Smart Manufacturing</h3>
+                        <p class="project-description">End-to-end private 5G network solution for industrial IoT applications with ultra-low latency requirements, edge computing integration, and advanced network slicing capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">
